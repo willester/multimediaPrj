@@ -9,6 +9,7 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color:  rgb(9, 88, 88);
+    position: sticky;
   }
   
 li {
