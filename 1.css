@@ -2,7 +2,7 @@ body {
     margin:0;
 }
 
-
+/*  the css for the navbar */
 ul {
     list-style-type: none;
     margin: 0;
@@ -48,4 +48,17 @@ li a:hover:not(.active) {
 .navbar{
     position: sticky;
     top: 0;
+}
+
+
+/*   */
+
+#aboutCard{
+  float:right;  
+  display: none;
+}
+
+.display
+{
+    display: block;
 }
