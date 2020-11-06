@@ -11,23 +11,36 @@ ul {
     background-color:  rgb(9, 88, 88);
   }
   
-  li {
+li {
     float: left;
+    border-left: solid 0.5px gray;
+    border-right: solid 0.5px gray;
   }
+
+.about
+{
+    float:right;
+    border : none;
+}
   
-  li a {
+.last_before_about
+{
+    border-right: none;
+}
+
+li:first-child{
+    border-left:none;
+}
+  
+li a {
     display: block;
     color: white;
     text-align: center;
-    padding-top: 14px;
-    padding-bottom: 14px;
-    padding-left: 16px;
-    padding-right: 30px;
+    padding: 14px 16px;
     text-decoration: none;
-
   }
   
-  li a:hover:not(.active) {
+li a:hover:not(.active) {
     background-color:rgb(129, 212, 129);
   }
   
