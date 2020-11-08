@@ -56,10 +56,10 @@ li a:hover:not(.active) {
 
 #cardContainer{
   position: relative;
-  z-index: 2; /*  nu s sigur trb testat asta */
+  z-index: 2; 
   float:right;  
   display: block;
-  width: 50%;
+  width: 30%; /* a fost 50% in caz de probeleme pe parcurs trb remodificat in pozitia initiala */
   margin: 0px;
   justify-content: center;
   align-items: center;
@@ -68,16 +68,16 @@ li a:hover:not(.active) {
 #aboutCard
 {
   position: relative;
-  z-index: 2; /*  nu s sigur trb testat asta */
+  z-index: 2; 
   display: none;
   background-color: paleturquoise;
-  min-height: 40vh;
+  min-height: 30vh;
   width: 35rem;
   padding: 2rem 5rem;
   margin: 0px;
 
   border-radius: 30px;
-  box-shadow: 0px 20px 20px rgba(0,0,0,0.2);
+  box-shadow: -10px 20px 20px rgba(0,0,0,0.2);
 
   float:right;  
   
@@ -85,7 +85,7 @@ li a:hover:not(.active) {
 
 #aboutCard:hover
 {
-  box-shadow: 0px 50px 20px rgba(0,0,0,0.2);
+  box-shadow: -10px 40px 20px rgba(0,0,0,0.3);
 }
 
 .display
@@ -106,4 +106,10 @@ li a:hover:not(.active) {
 {
   z-index: 1;
   position: absolute;
+}
+
+.giticon,.linkedinicon{
+  height: 50px;
+  width: 50px;
+  margin-right: 20px;
 }
