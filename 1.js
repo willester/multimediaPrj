@@ -4,7 +4,11 @@ console.log('test')
 
 const aboutbtn = document.getElementById('about')
 const aboutCard = document.getElementById('aboutCard')
+
 const canvas = document.getElementById('ecranJoc')
+const c = canvas.getContext("2d");
+c.fillRect(0, 0, canvas.width, canvas.height);
+
 
 aboutbtn.onclick = () => {
     
@@ -16,7 +20,7 @@ aboutbtn.onclick = () => {
 
 class Broscoiu
 {
-    
+
 }
 
 
