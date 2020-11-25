@@ -46,7 +46,7 @@ li:first-child{
 li a {
     justify-content: center;
     display: block;
-    color: black;
+    color: whitesmoke;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -59,7 +59,7 @@ li span {
   
 li a:hover:not(.active) {
     background-color:rgb(129, 212, 129);
-    color:white;
+    color:black;
   }
 
 
@@ -82,6 +82,7 @@ li a:hover:not(.active) {
   display: block;
   width: 30%; /* a fost 50% in caz de probeleme pe parcurs trb remodificat in pozitia initiala */
   margin: 0px;
+  padding: 0% 20%;
   justify-content: center;
   align-items: center;
 }
@@ -136,5 +137,10 @@ li a:hover:not(.active) {
   margin-right: 20px;
 }
 
+#mainBody{
+  position: absolute;
+  display: flex;
+  z-index: 0;
+}
 
 
