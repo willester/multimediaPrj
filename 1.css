@@ -50,6 +50,7 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    transition: 1.5s;
   }
 
 li span {
@@ -60,7 +61,12 @@ li span {
 li a:hover:not(.active) {
     background-color:rgb(129, 212, 129);
     color:black;
+    transition: 1.5s;
+   
   }
+
+
+li a:hover
 
 
 .navbar{
