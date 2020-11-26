@@ -144,12 +144,6 @@ li a:hover:not(.active) {
   margin-right: 20px;
 }
 
-#mainBody{
-  position: absolute;
-  display: flex;
-  z-index: 0;
-}
-
 
 /* css for creating the spotlights and animating them like they are used at some movie premiere  */
 
@@ -239,4 +233,53 @@ li a:hover:not(.active) {
   transform: rotate(70deg);
   animation: reflector1  8s linear infinite;
   transform-origin: 50% 100%;
+}
+
+
+/*  body css   */
+
+
+#mainBody{
+  position: absolute;
+  
+  z-index: 0;
+  justify-content: center;
+}
+
+
+#welcomeU{
+  padding:0% 25%;
+ 
+  display: flex;
+  font-size: 4rem;
+  margin-bottom: 0%;
+  justify-content: center;
+}
+
+#shortDersc{
+  display: flex;
+  font-size: 2rem;
+}
+
+hr {
+  overflow: visible; /* For IE */
+  padding: 0;
+  border: none;
+  border-top:  7px double rgb(0, 0, 0);
+  color: #333;
+  text-align: center;
+  border-radius: 20%;
+}
+
+.gridDesc {
+  display: grid;
+  grid-template-columns: auto auto ;
+  
+  position: relative;;
+}
+
+.gridItem {
+  position: relative;;
+ font-size: 1.5rem;
+  text-align: center;
 }
