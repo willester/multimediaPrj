@@ -273,13 +273,36 @@ hr {
 
 .gridDesc {
   display: grid;
-  grid-template-columns: auto auto ;
+  grid-template-columns: auto auto auto ;
   
   position: relative;;
 }
 
 .gridItem {
-  position: relative;;
+  position: relative;
  font-size: 1.5rem;
   text-align: center;
+}
+
+
+/*  css for the movie poster lists */
+
+.gridmovieposters
+{
+  display: grid;
+  grid-template-columns: auto auto ;
+  
+  position: relative;
+}
+
+.moviePoster{
+
+ width: 100%;
+ 
+ position: relative;
+}
+
+.movie
+{
+  cursor: pointer;
 }
