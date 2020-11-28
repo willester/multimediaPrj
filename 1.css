@@ -3,6 +3,8 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     
     background-image: linear-gradient(120deg, #101f1f, #22502c);
+
+    background-color: green;
     
     
 }
@@ -293,6 +295,7 @@ hr {
   grid-template-columns: auto auto ;
   
   position: relative;
+  flex-wrap: wrap;
 }
 
 .moviePoster{
@@ -306,3 +309,9 @@ hr {
 {
   cursor: pointer;
 }
+
+.movieTitle
+{
+  margin-bottom: 10%;
+}
+

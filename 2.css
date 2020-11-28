@@ -1,0 +1,17 @@
+@media screen and (min-width: 1024px) {
+   
+
+
+    article {
+        margin-top: 7%;
+    }
+
+    .descriere{
+         margin-top: 15%;
+    }
+
+    .movieTitle{
+        font-size: 3rem;
+    }
+
+}
