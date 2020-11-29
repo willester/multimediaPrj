@@ -20,6 +20,11 @@ body {
     
 }
 
+h1,h2,p,span {
+  color: black;
+}
+
+
 ul {
 
     list-style-type: none;
@@ -296,6 +301,7 @@ hr {
   
   position: relative;
   flex-wrap: wrap;
+  margin-bottom: 2%;
 }
 
 .moviePoster{
@@ -308,9 +314,9 @@ hr {
 .movie
 {
   cursor: pointer;
-  background-color: #3d1a02;
+  background: linear-gradient(to bottom right,#632c08, #3d1a02);
   padding: 3%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: -10px 20px 20px rgba(0,0,0,0.9);
 
 }
 
