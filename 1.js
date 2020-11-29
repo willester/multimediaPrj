@@ -4,7 +4,7 @@ window.onload = () => {
 
 const aboutbtn = document.getElementById('about')
 const aboutCard = document.getElementById('aboutCard')
-const ceva = document.querySelector('.gridmovieposters')
+//const ceva = document.querySelector('.gridmovieposters')
 
 
 
@@ -19,7 +19,12 @@ let ctx2 = c2.getContext("2d");
 let python = document.getElementById('python')
 
 
+let c3 = document.getElementById("myCanvas3");
+let ctx3 = c3.getContext("2d");
+let nasu = document.getElementById('nasu')
 
+
+console.log(nasu.width)
 
 let img = new Image();
 
@@ -41,6 +46,26 @@ img.onload = function(){
     python.height = c2.height
 
 
+    ///
+
+    let diferentaX2 = c.width - nasu.width
+    let diferentaY2 = c.height - nasu.height
+
+
+    c3.width = nasu.width+diferentaX2
+
+    c3.height = nasu.height+diferentaY2
+
+    //debug purposes
+    console.log(c.width + "c1")
+    console.log(c2.height + " c2")
+    console.log(c3.width + " c3")
+
+    nasu.width = c3.width
+    nasu.height = c3.height
+
+    ctx3.drawImage(nasu,0,0,nasu.width,nasu.height)
+
    ctx2.drawImage(python,0,0,python.width,python.height)
     
     ctx.drawImage(img, 0, 0, this.width,this.height);
@@ -52,16 +77,6 @@ img.src = "posters/fantasticPoster.jpg"
 
 // python.width = c.width
 // python.height = c.height
-
-
-
-
-
-
-
-
-
-
 
 
 
