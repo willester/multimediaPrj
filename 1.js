@@ -112,9 +112,23 @@ img.src = "posters/fantasticPoster.jpg"
 
 c.onclick = () => 
 {
-    window.open('1.html')
+    window.open('moviesHtmls/fantastic.html')
 }
 
+c2.onclick = () => 
+{
+    window.open('moviesHtmls/python.html')
+}
+
+c3.onclick = () => 
+{
+    window.open('moviesHtmls/nasu.html')
+}
+
+c4.onclick = () => 
+{
+    window.open('moviesHtmls/sw.html')
+}
 
 let userName = 'fellow cinephile'
 let logged = false;
