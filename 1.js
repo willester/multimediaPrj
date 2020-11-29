@@ -115,7 +115,7 @@ c.onclick = () =>
 }
 
 
-let userName = 'anonymous'
+let userName = 'fellow cinephile'
 let logged = false;
 
 

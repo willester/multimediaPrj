@@ -255,7 +255,8 @@ li a:hover:not(.active) {
 
 
 #welcomeU{
-  padding:0% 25%;
+
+  padding:0% 15%;
  
   display: flex;
   font-size: 4rem;
@@ -324,4 +325,30 @@ hr {
 {
   margin-bottom: 10%;
 }
+
+
+/* css for news section */
+
+#newsGrid
+{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  
+  position: relative;
+  flex-wrap: wrap;
+  margin-bottom: 2%;
+}
+
+
+
+.stire > img{
+  width: 90% ; 
+  border: solid black 5px;
+  
+}
+
+.stire > p {
+  margin: 5%
+}
+
 
