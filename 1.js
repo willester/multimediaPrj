@@ -24,6 +24,13 @@ let ctx3 = c3.getContext("2d");
 let nasu = document.getElementById('nasu')
 
 
+let c4 = document.getElementById("myCanvas4");
+let ctx4 = c4.getContext("2d");
+let sw = document.getElementById('sw')
+
+
+
+
 console.log(nasu.width)
 
 let img = new Image();
@@ -34,6 +41,8 @@ img.onload = function(){
    c.width = this.width
     c.height = this.height
     
+    // for canvas 2 
+
     let diferentaX = c.width - python.width
     let diferentaY = c.height - python.height
 
@@ -46,7 +55,7 @@ img.onload = function(){
     python.height = c2.height
 
 
-    ///
+    // for canvas 3 
 
     let diferentaX2 = c.width - nasu.width
     let diferentaY2 = c.height - nasu.height
@@ -57,12 +66,32 @@ img.onload = function(){
     c3.height = nasu.height+diferentaY2
 
     //debug purposes
-    console.log(c.width + "c1")
-    console.log(c2.height + " c2")
-    console.log(c3.width + " c3")
+   // console.log(c.width + "c1")
+    //console.log(c2.width + " c2")
+   // console.log(c3.width + " c3")
 
     nasu.width = c3.width
     nasu.height = c3.height
+
+    //for canvas 4 
+
+    let diferentaX3 = c.width - sw.width
+    let diferentaY3 = c.height - sw.height
+
+
+    c4.width = sw.width+diferentaX3
+
+    c4.height = sw.height+diferentaY3
+
+    sw.width = c4.width
+    sw.height = c4.height
+
+
+    // drawing the posters on the canvases
+    
+    
+    ctx4.drawImage(sw,0,0,sw.width,sw.height)
+
 
     ctx3.drawImage(nasu,0,0,nasu.width,nasu.height)
 
