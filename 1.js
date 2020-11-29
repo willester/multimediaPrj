@@ -7,12 +7,20 @@ const aboutCard = document.getElementById('aboutCard')
 //const ceva = document.querySelector('.gridmovieposters')
 
 
+// news js 
+const news1 = document.getElementById('news1')
+const news2 = document.getElementById('news2')
+const news3 = document.getElementById('news3')
 
+const firstNewsContent =document.getElementById('firstNews')
+const secondNewsContent = document.getElementById('secondNews')
+const thirdNewsContent = document.getElementById('thirdNews')
+const placeHolderConent = document.getElementById('placeholder')
+
+
+// camvas js
 let c = document.getElementById("myCanvas");
 let ctx = c.getContext("2d");
-
-
-
 
 let c2 = document.getElementById("myCanvas2");
 let ctx2 = c2.getContext("2d");
@@ -102,13 +110,6 @@ img.onload = function(){
 img.src = "posters/fantasticPoster.jpg"
 
 
-//470.483x664.6
-
-// python.width = c.width
-// python.height = c.height
-
-
-
 c.onclick = () => 
 {
     window.open('1.html')
@@ -130,6 +131,38 @@ aboutbtn.onclick = () => {
     aboutCard.style.display = aboutCard.style.display === 'block' ? 'none' : 'block'
     
 }
+
+news1.onclick = () => {
+
+    if(firstNewsContent.style.display != 'block'){
+    placeHolderConent.style.display = 'none'
+    secondNewsContent.style.display = 'none'
+    thirdNewsContent.style.display = 'none'
+    firstNewsContent.style.display = 'block'
+    }
+}
+
+news2.onclick = () => {
+
+    if(secondNewsContent.style.display != 'block'){
+    placeHolderConent.style.display = 'none'
+    secondNewsContent.style.display = 'block'
+    thirdNewsContent.style.display = 'none'
+    firstNewsContent.style.display = 'none'
+    }
+}
+
+news3.onclick = () => {
+
+    if(thirdNewsContent.style.display != 'block'){
+    placeHolderConent.style.display = 'none'
+    secondNewsContent.style.display = 'none'
+    thirdNewsContent.style.display = 'block'
+    firstNewsContent.style.display = 'none'
+    }
+}
+
+
 
 
 
