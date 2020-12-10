@@ -1,0 +1,251 @@
+*{
+  box-sizing: border-box;
+}
+body {
+    margin:0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+    background-image: linear-gradient(120deg, #203030, #276334);
+
+    background-color: green;
+}
+/*  the css for the navbar */
+
+.navbar{
+   
+    position: fixed;
+    top: 0;
+    height: 60px;
+    width: 100vw;
+    z-index:1;
+    
+}
+
+h1,h2,p,span {
+  color: black;
+  text-align: center;
+}
+
+
+ul {
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0% 0px;
+    
+    overflow: hidden;
+    background-color:  rgb(8, 77, 77);
+    position: sticky;
+  }
+  
+li {
+    display: flex;
+    justify-content: center;
+    min-height: 60px;
+    float: left;
+    margin: 0% 0.5%;
+  }
+
+#about
+{
+    float:right;
+    border : none;
+    margin-right: 25%;
+  
+}
+  
+.last_before_about
+{
+    border-right: none;
+}
+
+li:first-child{
+    border-left:none;
+    margin-left: 20%;
+}
+  
+li a {
+    justify-content: center;
+    display: block;
+    color: whitesmoke;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 1.5s;
+  }
+
+li span {
+  justify-content: center;
+
+}
+  
+li a:hover:not(.active) {
+    background-color:rgb(129, 212, 129);
+    color:black;
+    transition: 1.5s;
+   
+  }
+
+
+/* the css for the gridbox */
+#movieContainer {
+
+  position: relative;
+  display: grid;
+  top:60px;
+  margin-top: 40px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 40px;
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-top: 5em;
+  grid-template-columns:  1fr 1fr 1fr ;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "grid-poster grid-text grid-rating"
+  "grid-playlist grid-trailer grid-trailer"
+  "grid-crew grid-comments grid-comments";
+  grid-column-gap: 5em;
+  grid-row-gap: 5em;
+}
+
+.grid-poster {
+  grid-area: grid-poster;
+  height: auto;
+  width: auto;
+  align-items: center;
+}
+.grid-poster img{
+  width: 100%;
+  height: 100%;
+  border-radius: 5%;
+}
+
+.grid-text {
+  grid-area: grid-text;
+  text-align: justify;
+  width: auto;
+  height: auto;
+}
+.grid-text p{
+  text-align: justify;
+}
+
+.grid-rating {
+  grid-area: grid-rating;
+  width: auto;
+  height: auto;
+  background-color: paleturquoise;
+  border-radius: 20px;
+  text-align: center;
+}
+.grid-rating a{
+  display: block;
+  margin:10px;
+}
+.grid-playlist{
+  grid-area: grid-playlist;
+  width: auto;
+  height: auto;
+}
+audio{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#playlist{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 20px;
+    width: auto;
+    height: auto;
+}
+.grid-trailer{
+  grid-area: grid-trailer;
+  position: relative;
+  text-align: center;
+  width: auto;
+  height: auto;
+} 
+video{
+  width: 600px;
+  height: 340px;
+}
+/* CSS for slideshow*/
+.grid-crew{
+  grid-area: grid-crew;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  height: 250px;
+}
+
+.slideshow {
+  position: relative;
+  margin: auto;
+}
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-style: italic;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* CSS for comment section*/
+.grid-comments{
+  height: auto;
+  width: auto;
+  grid-area: grid-comments;
+}
+.comment-section{
+  width:50%;
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+}
+/*
+.comment.author-comment{
+  justify-content: flex-end;
+}
+.comment.author-comment .info{
+  order:3;
+}
+.comment.author-comment .avatar{
+  order:2;
+}
+.comment.author-comment p{
+  order: 1;
+}*/

@@ -1,13 +1,128 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+    <meta charset="UTF-8">
+    <title>Fantastic Planet / La planete sauvage (1973)</title>
+    <link rel="stylesheet" href="moviesStyle.css">
+    <link rel="icon" href="../logo.png" />
 </head>
 
 <body>
+    <ul class='navbar'>
 
-    TEST fantastic
+        <li class='first_item'> <a href="../../1.html"> <img src='../logo.png' height="30px" width="30px"> </a></li>
+        <li> <span style="padding-top: 25%  ; color:black"> Not IMDB</span></li>
+        <li style="padding-left: 5%;"><a href='../../1.html'>Home</a></li>
+        <li><a href='#movieList'>Movie List</a></li>
+        <li class='last_before_about'><a href='#newsGrid'>News</a></li>
 
+
+        <li id='about'><a href='#'>About</a></li>
+    </ul>
+    <div class="container">
+        
+        <div id="movieContainer">
+            
+            <!--container for the poster for the movie-->
+            <div class="grid-poster">
+                <img id="poster" src="../posters/fantasticPoster.jpg">
+            </div>
+            
+            <!--container for the description of the movie-->
+            <div class="grid-text">
+                <h2 class="movieTitle">Fantastic Planet / La planete sauvage (1973) </h2>
+                <p class="description " style="padding-right: 10%; margin-bottom: 10px; "> On the planet
+                    Ygam, the Draags, extremely technologically and spiritually advanced blue humanoids, consider the
+                    tiny Oms, human beings descendants of Terra’s inhabitants, as ignorant animals. Those who live in
+                    slavery are treated as simple pets and used to entertain Draag children; those who live hidden in
+                    the hostile wilderness of the planet are periodically hunted and ruthlessly slaughtered as if they
+                    were vermin.</p>
+            </div>
+
+            <!--container for the movie ratings-->
+            <div class="grid-rating">  
+            <h2>Rating</h2>
+            <a href='https://www.rottentomatoes.com/m/fantastic_planet' target="_blank"
+                style="text-decoration:none; color:black">
+                <img src="https://www.rottentomatoes.com/assets/pizza-pie/images/icons/tomatometer/tomatometer-fresh.149b5e8adc3.svg"
+                    style="width: 10%; padding-top: 3%; ">
+                <span style=" font-size: 2em; padding-left: 2%; "> 91%</span>
+            </a>
+            <a href='https://www.imdb.com/title/tt0070544/?ref_=nv_sr_srsg_0' target="_blank"
+                style="text-decoration:none; color:black">
+                <img src="http://www.overthinkingit.com/wp-content/uploads/2011/10/IMDB-Logo.png"
+                    style="width: 20%; padding-top: 3%; padding-left: 4%;">
+                <span style=" font-size: 2em; padding-left: 1.5%; "> 7.8/10 </span>
+            </a>
+            <p style="padding-top: 3%"><cite>For original, thoughtful, often strong (but tasteful) animation, I
+                    recommend Fantastic Planet for family viewing</cite> - New York Times</p>
+
+            </div>
+
+            <!--container for the OST playlist-->
+            <div class="grid-playlist">
+                <h2>OST playlist</h2>
+                <audio id="audio" preload="auto" tabindex="0" controls="controls" type="audio/mpeg">
+                   <source src="../moviesMedia/fantastic-planet/ost1.mp3" type="audio/mpeg">
+                    Sorry, your browser does not support HTML5!
+                </audio>
+                <ul id="playlist">
+                    <li class="active"><a href="ost1.mp3">OST 1</a></li>
+                    <li><a href="../moviesMedia/fantastic-planet/ost2.mp3">OST 2</a></li>
+                    <li><a href="../moviesMedia/fantastic-planet/ost3.mp3">OST 3</a></li>
+                </ul>
+            </div>
+
+            <!--container for the trailer-->
+            <div class="grid-trailer">
+                <h2>Trailer</h2>
+                <video width="580" height="380" controls>
+                    <source src="../moviesMedia/fantastic-planet/fantasticTrailer.mp4">
+                </video>
+            </div>
+
+            <!--container for information regarding the crew for the movie-->
+            <div class="grid-crew"> 
+                <h2>Crew</h2>
+                <div class="slideshow">
+                    <div class="slide">
+                        <img src="../moviesMedia/fantastic-planet/slideshow/Rene_Laloux_.jpg" style="width: 80%">
+                        <div class="text">Rene Laloux (director)</div>
+                    </div>
+                    <div class="slide">
+                        <img src="../moviesMedia/fantastic-planet/slideshow/Roland_Topor.jpg" style="width: 80%">
+                        <div class="text">Roland Topor (adaptation)</div>
+                    </div>
+                    <div class="slide">
+                        <img src="../moviesMedia/fantastic-planet/slideshow/stefan-wul.jpg" style="width: 80%">
+                        <div class="text">Stefan Wul (novel)</div>
+                    </div>
+                    <div class="slide">
+                        <img src="../moviesMedia/fantastic-planet/slideshow/anatole-dauman.jpg" style="width: 80%">
+                        <div class="text">Anatole Dauman (producer)</div>
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)"></a>
+                    <a class="next" onclick="plusSlides(1)"></a>
+                </div>
+                <div style="text-align: center;">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                </div>
+            </div>
+            <div class="grid-comments">
+                <h2>Comments</h2>
+                <ul class="comment-section">
+                    <input type="text" id="comment-name" placeholder="Enter Name"/>
+                    <textarea id="comment-message" rows="10" cols="10" placeholder="Your message"></textarea>
+                    <input type="button" value="Save" id="comment-save"/>
+                </ul>
+            </div>
+        </div>
+       
+    </div>
+    <script src="movie.js"></script>
 </body>
 
 </html>

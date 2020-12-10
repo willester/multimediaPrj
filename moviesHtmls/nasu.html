@@ -1,13 +1,134 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+    <meta charset="UTF-8">
+    <title>The Godfather (1972)</title>
+    <link rel="stylesheet" href="moviesStyle.css">
+    <link rel="icon" href="../logo.png" />
 </head>
 
 <body>
+    <ul class='navbar'>
 
-    TEST nasu
+        <li class='first_item'> <a href="../../1.html"> <img src='../logo.png' height="30px" width="30px"> </a></li>
+        <li> <span style="padding-top: 25%  ; color:black"> Not IMDB</span></li>
+        <li style="padding-left: 5%;"><a href='../../1.html'>Home</a></li>
+        <li><a href='#movieList'>Movie List</a></li>
+        <li class='last_before_about'><a href='#newsGrid'>News</a></li>
 
+
+        <li id='about'><a href='#'>About</a></li>
+    </ul>
+    <div class="container">
+        
+        <div id="movieContainer">
+            
+            <!--container for the poster for the movie-->
+            <div class="grid-poster">
+                <img id="poster" src="../posters/nasicuPoster.jpg">
+            </div>
+            
+            <!--container for the description of the movie-->
+            <div class="grid-text">
+                <h2 class="movieTitle"> The Godfather (1972)</h2>
+                <p class="descriere " style="padding-right: 10%; margin-bottom: 10px; ">Spanning the years
+                    1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized
+                    crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son,
+                    Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.</p>
+            </div>
+
+            <!--container for the movie ratings-->
+            <div class="grid-rating">  
+            <h2>Rating</h2>
+
+                <a href='https://www.rottentomatoes.com/m/godfather' target="_blank"
+                style="text-decoration:none; color:black">
+                <img src="https://www.rottentomatoes.com/assets/pizza-pie/images/icons/tomatometer/tomatometer-fresh.149b5e8adc3.svg"
+                    style="width: 10%; padding-top: 3%; ">
+                <span style=" font-size: 2em; padding-left: 2%; "> 98%</span>
+                </a>
+
+                 <a href='https://www.imdb.com/title/tt0068646/?ref_=nv_sr_srsg_0' target="_blank"
+                style="text-decoration:none; color:black">
+                <img src="http://www.overthinkingit.com/wp-content/uploads/2011/10/IMDB-Logo.png"
+                    style="width: 20%; padding-top: 3%; padding-left: 4%;">
+                <span style=" font-size: 2em; padding-left: 1.5%; "> 9.2/10 </span>
+                 </a>
+
+                <p style="padding-top: 3%; margin-right: 5%;"><cite>For those who have already witnessed the rise and
+                    fall of the Corleone
+                    family, which mirrors the trajectory of the American dream, now is as good a time as ever to
+                    revisit. For those who haven't seen Coppola's mafia movies: brace yourselves.</cite> - L.A.
+                Weekly</p>
+
+
+
+            </div>
+
+            <!--container for the OST playlist-->
+            <div class="grid-playlist">
+                <h2>OST playlist</h2>
+                <audio id="audio" preload="auto" tabindex="0" controls="controls" type="audio/mpeg">
+                   <source src="../moviesMedia/godfather/nasuOst1.mp3" type="audio/mpeg">
+                    Sorry, your browser does not support HTML5!
+                </audio>
+                <ul id="playlist">
+                    <li class="active"><a href="../moviesMedia/godfather/nasuOst1.mp3">OST 1</a></li>
+                    <li><a href="../moviesMedia/godfather/nasuOst2.mp3">OST 2</a></li>
+                    <li><a href="../moviesMedia/godfather/nasuOst3.mp3">OST 3</a></li>
+                </ul>
+            </div>
+
+            <!--container for the trailer-->
+            <div class="grid-trailer">
+                <h2>Trailer</h2>
+                <video width="580" height="380" controls>
+                    <source src="../moviesMedia/godfather/The Godfather Trailer (HD).mp4">
+                </video>
+            </div>
+
+            <!--container for information regarding the crew for the movie-->
+            <div class="grid-crew"> 
+                <h2>Crew</h2>
+                <div class="slideshow">
+                    <div class="slide">
+                        <img src="../moviesMedia/godfather/slideshow/Francis_Ford_Coppola.jpg" style="width: 80%">
+                        <div class="text">Francis Ford Cuppole (director)</div>
+                    </div>
+                    <div class="slide">
+                        <img src="../moviesMedia/godfather/slideshow/Mario Puzo.jpg" style="width: 80%">
+                        <div class="text">Mario Puzo (writer)</div>
+                    </div>
+                    <div class="slide">
+                        <img src="../moviesMedia/godfather/slideshow/Al_Ruddy.jpg" style="width: 80%">
+                        <div class="text">Al Ruddy (producer)</div>
+                    </div>
+                    <div class="slide">
+                        <img src="../moviesMedia/godfather/slideshow/Gray_Frederickson.jpg" style="width: 80%">
+                        <div class="text">Gray Frederickson (producer)</div>
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)"></a>
+                    <a class="next" onclick="plusSlides(1)"></a>
+                </div>
+                <div style="text-align: center;">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                </div>
+            </div>
+            <div class="grid-comments">
+                <h2>Comments</h2>
+                <ul class="comment-section">
+                    <input type="text" id="comment-name" placeholder="Enter Name"/>
+                    <textarea id="comment-message" rows="10" cols="10" placeholder="Your message"></textarea>
+                    <input type="button" value="Save" id="comment-save"/>
+                </ul>
+            </div>
+        </div>
+       
+    </div>
+    <script src="movie.js"></script>
 </body>
 
 </html>

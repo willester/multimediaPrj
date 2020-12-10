@@ -1,13 +1,137 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+    <meta charset="UTF-8">
+    <title>The Empire Strikes Back (1980)</title>
+    <link rel="stylesheet" href="moviesStyle.css">
+    <link rel="icon" href="../logo.png" />
 </head>
 
 <body>
+    <ul class='navbar'>
 
-    TEST sw
+        <li class='first_item'> <a href="../../1.html"> <img src='../logo.png' height="30px" width="30px"> </a></li>
+        <li> <span style="padding-top: 25%  ; color:black"> Not IMDB</span></li>
+        <li style="padding-left: 5%;"><a href='../../1.html'>Home</a></li>
+        <li><a href='#movieList'>Movie List</a></li>
+        <li class='last_before_about'><a href='#newsGrid'>News</a></li>
 
+
+        <li id='about'><a href='#'>About</a></li>
+    </ul>
+    <div class="container">
+        
+        <div id="movieContainer">
+            
+            <!--container for the poster for the movie-->
+            <div class="grid-poster">
+                <img id="poster" src="../posters/razboiulVedetelorPoster.jpg">
+            </div>
+            
+            <!--container for the description of the movie-->
+            <div class="grid-text">
+                <h2 class="movieTitle">The Empire Strikes Back (1980) </h2>
+                <p> The Adventure Continues…</p>
+                <p>
+                    The epic saga continues as Luke Skywalker, in hopes of defeating the evil Galactic Empire, learns
+                    the ways of the Jedi from aging master Yoda. But Darth Vader is more determined than ever to capture
+                    Luke. Meanwhile, rebel leader Princess Leia, cocky Han Solo, Chewbacca, and droids C-3PO and R2-D2
+                    are thrown into various stages of capture, betrayal and despair.
+                </p>
+            </div>
+
+            <!--container for the movie ratings-->
+            <div class="grid-rating">  
+            <h2>Rating</h2>
+            <a href='https://www.rottentomatoes.com/m/empire_strikes_back' target="_blank"
+            style="text-decoration:none; color:black">
+            <img src="https://www.rottentomatoes.com/assets/pizza-pie/images/icons/tomatometer/tomatometer-fresh.149b5e8adc3.svg"
+                style="width: 10%; padding-top: 3%; ">
+            <span style=" font-size: 2em; padding-left: 2%; "> 94%</span>
+
+        </a>
+
+        <a href='https://www.imdb.com/title/tt0080684/?ref_=nv_sr_srsg_0' target="_blank"
+            style="text-decoration:none; color:black">
+            <img src="http://www.overthinkingit.com/wp-content/uploads/2011/10/IMDB-Logo.png"
+                style="width: 20%; padding-top: 3%; padding-left: 4%;">
+            <span style=" font-size: 2em; padding-left: 1.5%; "> 8.7/10 </span>
+        </a>
+
+        <p style="padding-top: 3%"><cite>
+
+                The balance between action and mysticism in The Empire Strikes Back provides fascinating energy.
+                It's as if the kids are given one set of delights, the bravado of battles and elaborate warships
+                zooming through exotic space, and adults are given another, a layered explanation of what it all
+                means in the grand scheme of things. </cite> - San Francisco Chronicle</p>
+
+
+            </div>
+
+            <!--container for the OST playlist-->
+            <div class="grid-playlist">
+                <h2>OST playlist</h2>
+                <audio id="audio" preload="auto" tabindex="0" controls="controls" type="audio/mpeg">
+                   <source src="../moviesMedia/empire/swOst1.mp3" type="audio/mpeg">
+                    Sorry, your browser does not support HTML5!
+                </audio>
+                <ul id="playlist">
+                    <li class="active"><a href="../moviesMedia/empire/swOst1.mp3">OST 1</a></li>
+                    <li><a href="../moviesMedia/empire/swOst2.mp3">OST 2</a></li>
+                    <li><a href="../moviesMedia/empire/swOst3.mp3">OST 3</a></li>
+                </ul>
+            </div>
+
+            <!--container for the trailer-->
+            <div class="grid-trailer">
+                <h2>Trailer</h2>
+                <video width="580" height="380" controls>
+                    <source src="../moviesMedia/empire/Star Wars Episode V The Empire Strikes Back - Trailer.mp4">
+                </video>
+            </div>
+
+            <!--container for information regarding the crew for the movie-->
+            <div class="grid-crew"> 
+                <h2>Crew</h2>
+                <div class="slideshow">
+                    <div class="slide">
+                        <img src="../moviesMedia/empire/slideshow/Irvin Kershner.jpg" style="width: 80%">
+                        <div class="text">Irvin Kershner (director)</div>
+                    </div>
+                    <div class="slide">
+                        <img src="../moviesMedia/empire/slideshow/Leigh Brackett.jpg" style="width: 80%">
+                        <div class="text">Leigh Brackett (writer)</div>
+                    </div>
+                    <div class="slide">
+                        <img src="../moviesMedia/empire/slideshow/Lawrence Kasdan.jpg" style="width: 80%">
+                        <div class="text">Lawrence Kasdan (writer)</div>
+                    </div>
+                    <div class="slide">
+                        <img src="../moviesMedia/empire/slideshow/Gary Kutz.jpg" style="width: 80%">
+                        <div class="text">Gary Kutz (producer)</div>
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)"></a>
+                    <a class="next" onclick="plusSlides(1)"></a>
+                </div>
+                <div style="text-align: center;">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                </div>
+            </div>
+            <div class="grid-comments">
+                <h2>Comments</h2>
+                <ul class="comment-section">
+                    <input type="text" id="comment-name" placeholder="Enter Name"/>
+                    <textarea id="comment-message" rows="10" cols="10" placeholder="Your message"></textarea>
+                    <input type="button" value="Save" id="comment-save"/>
+                </ul>
+            </div>
+        </div>
+       
+    </div>
+    <script src="movie.js"></script>
 </body>
 
 </html>
