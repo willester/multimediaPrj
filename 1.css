@@ -16,7 +16,8 @@ body {
     position: sticky;
     top: 0;
     min-height: 60px;
-    
+    width:100vw;
+    z-index: 1;
     
 }
 
@@ -248,7 +249,7 @@ li a:hover:not(.active) {
 
 #mainBody{
   position: absolute;
-  
+  top:60px;
   z-index: 0;
   justify-content: center;
 }

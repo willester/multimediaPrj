@@ -10,9 +10,9 @@
 <body>
     <ul class='navbar'>
 
-        <li class='first_item'> <a href="../../1.html"> <img src='../logo.png' height="30px" width="30px"> </a></li>
+        <li class='first_item'> <a href="../1.html"> <img src='../logo.png' height="30px" width="30px"> </a></li>
         <li> <span style="padding-top: 25%  ; color:black"> Not IMDB</span></li>
-        <li style="padding-left: 5%;"><a href='../../1.html'>Home</a></li>
+        <li style="padding-left: 5%;"><a href='../1.html'>Home</a></li>
         <li><a href='#movieList'>Movie List</a></li>
         <li class='last_before_about'><a href='#newsGrid'>News</a></li>
 
@@ -26,6 +26,7 @@
             <!--container for the poster for the movie-->
             <div class="grid-poster">
                 <img id="poster" src="../posters/razboiulVedetelorPoster.jpg">
+                <button id="img_filter" onclick="changefilter()">Filter image</button>
             </div>
             
             <!--container for the description of the movie-->
@@ -85,9 +86,10 @@
             <!--container for the trailer-->
             <div class="grid-trailer">
                 <h2>Trailer</h2>
-                <video width="580" height="380" controls>
+                <video id= "video" width="580" height="380" controls>
                     <source src="../moviesMedia/empire/Star Wars Episode V The Empire Strikes Back - Trailer.mp4">
                 </video>
+                <button id="video_filter" onclick="filterVideo(this)">Filter video</button>
             </div>
 
             <!--container for information regarding the crew for the movie-->

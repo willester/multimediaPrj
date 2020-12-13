@@ -10,14 +10,11 @@
 <body>
     <ul class='navbar'>
 
-        <li class='first_item'> <a href="../../1.html"> <img src='../logo.png' height="30px" width="30px"> </a></li>
+        <li class='first_item'> <a href="../1.html"> <img src='../logo.png' height="30px" width="30px"> </a></li>
         <li> <span style="padding-top: 25%  ; color:black"> Not IMDB</span></li>
-        <li style="padding-left: 5%;"><a href='../../1.html'>Home</a></li>
-        <li><a href='#movieList'>Movie List</a></li>
-        <li class='last_before_about'><a href='#newsGrid'>News</a></li>
-
-
-        <li id='about'><a href='#'>About</a></li>
+        <li style="padding-left: 5%;"><a href='../1.html'>Home</a></li>
+        <li><a href='#trailer'> OST & Trailer</a></li>
+        <li class='last_before_about'><a href='#comments'>Comments</a></li>
     </ul>
     <div class="container">
         
@@ -26,6 +23,7 @@
             <!--container for the poster for the movie-->
             <div class="grid-poster">
                 <img id="poster" src="../posters/fantasticPoster.jpg">
+                <button id="img_filter" onclick="changeFilter(this)">Filter image</button>
             </div>
             
             <!--container for the description of the movie-->
@@ -62,23 +60,55 @@
             <!--container for the OST playlist-->
             <div class="grid-playlist">
                 <h2>OST playlist</h2>
-                <audio id="audio" preload="auto" tabindex="0" controls="controls" type="audio/mpeg">
-                   <source src="../moviesMedia/fantastic-planet/ost1.mp3" type="audio/mpeg">
+               <!-- <audio id="audio" preload="none" tabindex="0" controls="" type="audio/mpeg">
+                   <source src="../moviesMedia/fantastic-planet/ost1.mp3" data-track-number="1">
+                    <source src="../moviesMedia/fantastic-planet/ost2.mp3" data-track-number="2">
+                    <source src="../moviesMedia/fantastic-planet/ost3.mp3" data-track-number="3">
                     Sorry, your browser does not support HTML5!
                 </audio>
-                <ul id="playlist">
-                    <li class="active"><a href="ost1.mp3">OST 1</a></li>
-                    <li><a href="../moviesMedia/fantastic-planet/ost2.mp3">OST 2</a></li>
-                    <li><a href="../moviesMedia/fantastic-planet/ost3.mp3">OST 3</a></li>
-                </ul>
+            -->
+                <div class="player">
+                    <div class="prev">
+                        <img src="../icons/previous-button.png" onclick="previousSong()" id="previous-song"/>
+                    </div>
+                    <div class="time">
+                        <div id="current_time">
+                            00:00
+                        </div>
+                        <div class="loader">
+                            <div class="fill"></div>
+                        </div>
+                        <div id="total_time">
+                            00:00
+                        </div>
+                    </div>
+                    <div class="next">
+                        <img src="../icons/next-button.png" onclick="nextSong()" id="next-song"/>
+                    </div>  
+                </div>
+                <div id="playlist">
+                    <div>
+                        <img src="../icons/play-button.png" onclick="playPause()" id="play-pause"/>
+                        <a href="../moviesMedia/fantastic-planet/ost1.mp3" id="song">OST 1</a>
+                    </div>
+                    <div>
+                        <img src="../icons/play-button.png" onclick="playPause()" id="play-pause"/>
+                        <a href="../moviesMedia/fantastic-planet/ost2.mp3" id="song">OST 2</a>
+                    </div>
+                    <div>
+                        <img src="../icons/play-button.png" onclick="playPause()" id="play-pause"/>
+                        <a href="../moviesMedia/fantastic-planet/ost3.mp3" id="song">OST 3</a>
+                    </div>
+                </div>
             </div>
 
             <!--container for the trailer-->
-            <div class="grid-trailer">
+            <div class="grid-trailer" id="trailer">
                 <h2>Trailer</h2>
-                <video width="580" height="380" controls>
+                <video  width="580" height="380" controls>
                     <source src="../moviesMedia/fantastic-planet/fantasticTrailer.mp4">
                 </video>
+                <button id="video_filter" onclick="filterVideo(this)">Filter video</button>
             </div>
 
             <!--container for information regarding the crew for the movie-->
@@ -111,7 +141,7 @@
                     <span class="dot" onclick="currentSlide(4)"></span>
                 </div>
             </div>
-            <div class="grid-comments">
+            <div class="grid-comments" id="comments">
                 <h2>Comments</h2>
                 <ul class="comment-section">
                     <input type="text" id="comment-name" placeholder="Enter Name"/>

@@ -15,7 +15,7 @@ body {
    
     position: fixed;
     top: 0;
-    height: 60px;
+    min-height: 60px;
     width: 100vw;
     z-index:1;
     
@@ -64,7 +64,7 @@ li:first-child{
     margin-left: 20%;
 }
   
-li a {
+li a{
     justify-content: center;
     display: block;
     color: whitesmoke;
@@ -93,13 +93,8 @@ li a:hover:not(.active) {
   position: relative;
   display: grid;
   top:60px;
-  margin-top: 40px;
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-bottom: 40px;
-  padding-left: 5em;
-  padding-right: 5em;
-  padding-top: 5em;
+  padding: 8% 15%;
+  justify-content: center;
   grid-template-columns:  1fr 1fr 1fr ;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas: 
@@ -107,19 +102,35 @@ li a:hover:not(.active) {
   "grid-playlist grid-trailer grid-trailer"
   "grid-crew grid-comments grid-comments";
   grid-column-gap: 5em;
-  grid-row-gap: 5em;
+  grid-row-gap: 10em;
 }
 
 .grid-poster {
   grid-area: grid-poster;
   height: auto;
   width: auto;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+
 }
 .grid-poster img{
   width: 100%;
   height: 100%;
   border-radius: 5%;
+}
+#img_filter{
+  margin:0.5em;
+  padding:1em;
+  background-color: paleturquoise;
+  border-radius: 20px;
+  text-align: center;
+  width:100%
+}
+#img_filter:hover:not(.active) {
+  background-color:rgb(129, 212, 129);
+  color:black;
+  transition: 1.5s;
 }
 
 .grid-text {
@@ -153,24 +164,70 @@ audio{
     margin-top: 20px;
     margin-bottom: 20px;
 }
+.player{
+  padding: 1em;
+  margin-top: 2em;
+  display: flex;
+  flex-direction: row;
+  background-color: paleturquoise;
+  border-radius: 2em;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.time{
+  display: flex;
+  flex-direction: row;
+}
 #playlist{
+    background-color: rgb(8, 77, 77);
     display: flex;
+    margin-top: 2em;
     flex-direction: column;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: stretch;
     border-radius: 20px;
     width: auto;
     height: auto;
 }
+#playlist div{
+  justify-content: center;
+  width: 100%;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 1.5s;
+}
+#playlist div a{
+  color: whitesmoke;
+}
+#playlist div:hover{
+  background-color: paleturquoise;
+  color: black;
+  transition: 1.5s;
+}
+/*CSS for video (trailer)*/
 .grid-trailer{
   grid-area: grid-trailer;
   position: relative;
-  text-align: center;
-  width: auto;
+  text-align: end;
+  width: 100%;
   height: auto;
 } 
 video{
-  width: 600px;
-  height: 340px;
+  width: 80%;
+  height: auto;
+}
+#video_filter{
+  width: 80%;
+  margin:0.5em;
+  padding:1em;
+  background-color: paleturquoise;
+  border-radius: 20px;
+  text-align: center;
+}
+#video_filter:hover:not(.active) {
+  background-color:rgb(129, 212, 129);
+  color:black;
+  transition: 1.5s;
 }
 /* CSS for slideshow*/
 .grid-crew{
@@ -231,21 +288,10 @@ video{
   grid-area: grid-comments;
 }
 .comment-section{
-  width:50%;
+  border-radius: 20px;
+  width:80%;
+  padding: 1em;
   align-items: stretch;
   display: flex;
   flex-direction: column;
 }
-/*
-.comment.author-comment{
-  justify-content: flex-end;
-}
-.comment.author-comment .info{
-  order:3;
-}
-.comment.author-comment .avatar{
-  order:2;
-}
-.comment.author-comment p{
-  order: 1;
-}*/
