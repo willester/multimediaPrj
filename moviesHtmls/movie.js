@@ -1,6 +1,6 @@
 //JS code for filtering poster
-let poster=document.getElementById("poster");
-let filterBtn=document.getElementById("img_filter");
+const poster=document.getElementById("poster");
+const filterBtn=document.getElementById("img_filter");
 function changeFilter(obj){
   //filtering to black and white
   if(obj.innerHTML=="Filter image"){
@@ -29,34 +29,8 @@ function changeFilter(obj){
 }
 
 
-//JS code for playlist
-// let current_time = document.querySelector("#current_time")
-// let total_time = document.querySelector("#total_time")
+//JS for audio player -> player-fantastic.js, player-python.js, player-godfather.js, player-empire.js
 
-// let prev_icon = document.querySelector("#prev_icon")
-// let next_icon = document.querySelector("#next_icon")
-// let play_icon = document.querySelector("#play_icon")
-
-// let song = document.querySelector("#song")
-// let img=document.querySelector("#play-pause")
-
-// let audio = new Audio()
-// let current_song = 0;
-
-
-// img.onclick=playPause()
-
-// function playPause(){
-//   if(audio.paused){
-//     if(audio.src=="#song"){
-//       audio.src=audios[current_song]
-//     }
-//     audio.play()
-//     preventDefault()
-//   }else{
-//     audio.pause();
-//   }
-// }
 //JS for video controls 
 
 //JS code for filtering video

@@ -68,15 +68,41 @@
             <!--container for the OST playlist-->
             <div class="grid-playlist">
                 <h2>OST playlist</h2>
-                <audio id="audio" preload="auto" tabindex="0" controls="controls" type="audio/mpeg">
-                   <source src="../moviesMedia/python/pythonOst1.mp3" type="audio/mpeg">
-                    Sorry, your browser does not support HTML5!
-                </audio>
-                <ul id="playlist">
-                    <li class="active"><a href="pythonOst1.mp3">OST 1</a></li>
-                    <li><a href="../moviesMedia/python/pythonOst2.mp3">OST 2</a></li>
-                    <li><a href="../moviesMedia/python/pythonOst3.mp3">OST 3</a></li>
-                </ul>
+                <div class="player">
+                    <audio src="../moviesMedia/python/pythonOst1.mp3" id="song"></audio>
+                    <div class="songCover">
+                        <img src="../moviesMedia/python/cover1.jpg" id="cover">
+                        <div id="playlist">
+                            <div>
+                                
+                                <a href="../moviesMedia/python/pythonOst1.mp3" id="song">OST 1</a>
+                            </div>
+                            <div>
+                                <a href="../moviesMedia/python/pythonOst2.mp3" id="song">OST 2</a>
+                            </div>
+                            <div>
+                                <a href="../moviesMedia/python/pythonOst3.mp3" id="song">OST 3</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="title">OST1</div>
+                    <div class="controls">
+                        <img src="../icons/play-button.png" onclick="playPause()" id="play-pause"/>
+                        <img src="../icons/previous-button.png" onclick="previousSong()" id="previous-song"/>
+                        
+                        <input
+                            type="range"
+                            id="progress-bar"
+                            min="0"
+                            max=""
+                            value="0"
+                            onchange="changeProgressBar()"
+                        />
+                        <div class="currentTime"></div>
+                        <div class="durationTime"></div>
+                        <img src="../icons/next-button.png" onclick="nextSong()" id="next-song"/>
+                    </div>
+                </div>
             </div>
 
             <!--container for the trailer-->
@@ -129,6 +155,7 @@
         </div>
        
     </div>
+    <script src="player-python.js"></script>
     <script src="movie.js"></script>
 </body>
 

@@ -60,44 +60,39 @@
             <!--container for the OST playlist-->
             <div class="grid-playlist">
                 <h2>OST playlist</h2>
-               <!-- <audio id="audio" preload="none" tabindex="0" controls="" type="audio/mpeg">
-                   <source src="../moviesMedia/fantastic-planet/ost1.mp3" data-track-number="1">
-                    <source src="../moviesMedia/fantastic-planet/ost2.mp3" data-track-number="2">
-                    <source src="../moviesMedia/fantastic-planet/ost3.mp3" data-track-number="3">
-                    Sorry, your browser does not support HTML5!
-                </audio>
-            -->
                 <div class="player">
-                    <div class="prev">
+                    <audio src="../moviesMedia/fantastic-planet/ost1.mp3" id="song"></audio>
+                    <div class="songCover">
+                        <img src="../moviesMedia/fantastic-planet/cover1.jpg" id="cover">
+                        <div id="playlist">
+                            <div>
+                                
+                                <a href="../moviesMedia/fantastic-planet/ost1.mp3" id="song">OST 1</a>
+                            </div>
+                            <div>
+                                <a href="../moviesMedia/fantastic-planet/ost2.mp3" id="song">OST 2</a>
+                            </div>
+                            <div>
+                                <a href="../moviesMedia/fantastic-planet/ost3.mp3" id="song">OST 3</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="title">OST1</div>
+                    <div class="controls">
+                        <img src="../icons/play-button.png" onclick="playPause()" id="play-pause"/>
                         <img src="../icons/previous-button.png" onclick="previousSong()" id="previous-song"/>
-                    </div>
-                    <div class="time">
-                        <div id="current_time">
-                            00:00
-                        </div>
-                        <div class="loader">
-                            <div class="fill"></div>
-                        </div>
-                        <div id="total_time">
-                            00:00
-                        </div>
-                    </div>
-                    <div class="next">
+                        
+                        <input
+                            type="range"
+                            id="progress-bar"
+                            min="0"
+                            max=""
+                            value="0"
+                            onchange="changeProgressBar()"
+                        />
+                        <div class="currentTime"></div>
+                        <div class="durationTime"></div>
                         <img src="../icons/next-button.png" onclick="nextSong()" id="next-song"/>
-                    </div>  
-                </div>
-                <div id="playlist">
-                    <div>
-                        <img src="../icons/play-button.png" onclick="playPause()" id="play-pause"/>
-                        <a href="../moviesMedia/fantastic-planet/ost1.mp3" id="song">OST 1</a>
-                    </div>
-                    <div>
-                        <img src="../icons/play-button.png" onclick="playPause()" id="play-pause"/>
-                        <a href="../moviesMedia/fantastic-planet/ost2.mp3" id="song">OST 2</a>
-                    </div>
-                    <div>
-                        <img src="../icons/play-button.png" onclick="playPause()" id="play-pause"/>
-                        <a href="../moviesMedia/fantastic-planet/ost3.mp3" id="song">OST 3</a>
                     </div>
                 </div>
             </div>
@@ -152,6 +147,7 @@
         </div>
        
     </div>
+    <script src="player-fantastic.js"></script>
     <script src="movie.js"></script>
 </body>
 
