@@ -111,7 +111,12 @@
                 <video id="video" width="580" height="380" controls>
                     <source src="../moviesMedia/python/pythonTrailer.mp4">
                 </video>
-                <button id="video_filter" onclick="filterVideo(this)">Filter video</button>
+                <div class="video_filters">
+                    <button id="btnFilterVideo" onclick="blackwhite()">black and white</button>
+                    <button id="btnFilterVideo" onclick="sepia()">sepia</button>
+                    <button id="btnFilterVideo" onclick="invert()">invert</button>
+                    <button id="btnFilterVideo" onclick="nofilter()">no filter</button>
+                </div>
             </div>
 
             <!--container for information regarding the crew for the movie-->

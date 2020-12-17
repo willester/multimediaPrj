@@ -180,6 +180,7 @@ audio{
   display:flex;
   flex-direction: row;
   padding:1em;
+  border-radius: 2em;
   background-color: rgb(8, 77, 77);
 }
 #cover{
@@ -232,10 +233,16 @@ video{
   width: 90%;
   height: auto;
 }
-#video_filter{
-  width: 20%;
-  margin:0.5em;
-  padding:1em;
+.video_filters{
+  width: 90%;
+  display:flex;
+  flex-direction:row-reverse;
+  align-items: flex-end;
+}
+#btnFilterVideo{
+  width: 22%;
+  margin:0.2em;
+  padding:0.5em;
   background-color: paleturquoise;
   border-radius: 20px;
   text-align: center;

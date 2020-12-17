@@ -34,7 +34,22 @@ function changeFilter(obj){
 //JS for video controls 
 
 //JS code for filtering video
-// let video=document.querySelector("video");
+let video=document.querySelector("video");
+function blackwhite(){
+  video.style.filter = "grayscale(100%)"
+}
+
+function sepia(){
+  video.style.filter = "sepia(100%)"
+}
+
+function invert(){
+  video.style.filter = "invert(100%)"
+}
+
+function nofilter(){
+  video.style.filter = "none"
+}
 // let filterBtn=document.getElementById("video_filter");
 // function filterVideo(obj){
 //   //filtering to black and white
