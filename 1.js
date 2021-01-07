@@ -6,7 +6,7 @@ window.onload = () => {
     const aboutCard = document.getElementById('aboutCard')
     //const ceva = document.querySelector('.gridmovieposters')
     
-    
+    const secret = document.getElementById('secret')    
     // news js 
     const news1 = document.getElementById('news1')
     const news2 = document.getElementById('news2')
@@ -36,6 +36,16 @@ window.onload = () => {
     let ctx4 = c4.getContext("2d");
     let sw = document.getElementById('sw')
     
+    let counterSecret = 0
+
+    secret.onclick = () =>
+    {
+        counterSecret++
+        if(counterSecret == 10)
+        {
+            window.location = "secret.html"
+        }
+    }
     
     
     
