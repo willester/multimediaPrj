@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>The Empire Strikes Back (1980)</title>
     <link rel="stylesheet" href="moviesStyle.css">
+    <link rel="stylesheet" href="moviesStyle2.css">
     <link rel="icon" href="../logo.png" />
 </head>
 
@@ -93,7 +94,7 @@
                     <div class="controls">
                         <img src="../icons/play-button.png" onclick="playPause()" id="play-pause"/>
                         <img src="../icons/previous-button.png" onclick="previousSong()" id="previous-song"/>
-                        
+                        <div class="currentTime"></div>
                         <input
                             type="range"
                             id="progress-bar"
@@ -102,7 +103,6 @@
                             value="0"
                             onchange="changeProgressBar()"
                         />
-                        <div class="currentTime"></div>
                         <div class="durationTime"></div>
                         <img src="../icons/next-button.png" onclick="nextSong()" id="next-song"/>
                     </div>
@@ -112,9 +112,22 @@
             <!--container for the trailer-->
             <div class="grid-trailer">
                 <h2>Trailer</h2>
-                <video id= "video" width="580" height="380" controls>
+                <video width="100%" height="100%" id="video-trailer">
                     <source src="../moviesMedia/empire/Star Wars Episode V The Empire Strikes Back - Trailer.mp4">
                 </video>
+                <div class="controls">
+                    <img src="../icons/play-button.png" id="play-video">
+                    <span id="currentTimeVideo"></span>/<span id="durationTimeVideo"></span>
+                    <input 
+                        type="range"
+                        id="range"
+                        min="0"
+                        max=""
+                        value="0"
+                        onchange="changeProgressBarVideo()"
+                    >
+                </div>
+                
                 <div class="video_filters">
                     <button id="btnFilterVideo" onclick="blackwhite()">black and white</button>
                     <button id="btnFilterVideo" onclick="sepia()">sepia</button>
