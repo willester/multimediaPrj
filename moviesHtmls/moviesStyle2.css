@@ -12,3 +12,25 @@
         height: 75%;
     }
 } */
+
+@media screen and (min-width: 1024px)
+{
+    #movieContainer {
+
+        position: relative;
+        display: grid;
+        top:60px;
+        padding: 8% 15%;
+        justify-content: center;
+        grid-template-columns:  1fr 1fr 1fr ;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "grid-poster grid-text grid-rating"
+        "grid-playlist grid-trailer grid-trailer"
+        "grid-crew grid-comments grid-comments";
+        grid-column-gap: 5em;
+        grid-row-gap: 10em;
+        flex-wrap: wrap;
+        width: auto;
+      }
+}

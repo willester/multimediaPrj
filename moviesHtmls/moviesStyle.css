@@ -95,15 +95,16 @@ li a:hover:not(.active) {
   top:60px;
   padding: 8% 15%;
   justify-content: center;
-  grid-template-columns:  1fr 1fr 1fr ;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns:  1fr ;
+  grid-template-rows: 1fr;
   grid-template-areas: 
-  "grid-poster grid-text grid-rating"
-  "grid-playlist grid-trailer grid-trailer"
-  "grid-crew grid-comments grid-comments";
+  "grid-poster" "grid-text" "grid-rating"
+  "grid-playlist" "grid-trailer" 
+  "grid-crew"  "grid-comments";
   grid-column-gap: 5em;
   grid-row-gap: 10em;
   flex-wrap: wrap;
+  width: auto;
 }
 
 .grid-poster {
@@ -113,6 +114,7 @@ li a:hover:not(.active) {
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 
 }
 .grid-poster img{
@@ -206,6 +208,7 @@ audio{
     border-radius: 2em;
     width: 5vw;
     height: 30vh;
+    display: none;
 }
 #playlist div{
   justify-content: center;
@@ -361,6 +364,13 @@ video{
   width:80%;
   padding: 1em;
   align-items: stretch;
+  display: flex;
+  flex-direction: column;
+}
+
+.container{
+  width: 100%;
+  padding: 0% 7%;
   display: flex;
   flex-direction: column;
 }
