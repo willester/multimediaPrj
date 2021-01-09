@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Fantastic Planet / La planete sauvage (1973)</title>
     <link rel="stylesheet" href="moviesStyle.css">
+    <link rel="stylesheet" href="moviesStyle2.css">
     <link rel="icon" href="../logo.png" />
 </head>
 
@@ -81,7 +82,7 @@
                     <div class="controls">
                         <img src="../icons/play-button.png" onclick="playPause()" id="play-pause"/>
                         <img src="../icons/previous-button.png" onclick="previousSong()" id="previous-song"/>
-                        
+                        <div class="currentTime"></div>
                         <input
                             type="range"
                             id="progress-bar"
@@ -90,7 +91,6 @@
                             value="0"
                             onchange="changeProgressBar()"
                         />
-                        <div class="currentTime"></div>
                         <div class="durationTime"></div>
                         <img src="../icons/next-button.png" onclick="nextSong()" id="next-song"/>
                     </div>
@@ -100,9 +100,22 @@
             <!--container for the trailer-->
             <div class="grid-trailer" id="trailer">
                 <h2>Trailer</h2>
-                <video  width="580" height="380" controls>
+                <video width="100%" height="100%" id="video-trailer">
                     <source src="../moviesMedia/fantastic-planet/fantasticTrailer.mp4">
                 </video>
+                <div class="controls">
+                    <img src="../icons/play-button.png" id="play-video">
+                    <span id="currentTimeVideo"></span>/<span id="durationTimeVideo"></span>
+                    <input 
+                        type="range"
+                        id="range"
+                        min="0"
+                        max=""
+                        value="0"
+                        onchange="changeProgressBarVideo()"
+                    >
+                </div>
+                
                 <div class="video_filters">
                     <button id="btnFilterVideo" onclick="blackwhite()">black and white</button>
                     <button id="btnFilterVideo" onclick="sepia()">sepia</button>
@@ -142,14 +155,31 @@
                 </div>
             </div>
             <div class="grid-comments" id="comments">
-                <h2>Comments</h2>
-                <ul class="comment-section">
-                    <input type="text" id="comment-name" placeholder="Enter Name"/>
-                    <textarea id="comment-message" rows="10" cols="10" placeholder="Your message"></textarea>
-                    <input type="button" value="Save" id="comment-save"/>
-                </ul>
-            </div>
-        </div>
+                <button class="navbutton" onClick="clearComment()">Clear Comment</button>
+                <button class="navbutton" onClick="saveComment()">Save Comment </button>
+
+                <div id="dtext">
+                    <h4>Your comment</h4>
+                    <input id="namebox" type="text" maxlength="32" size="20" placeholder="Name" />
+                    <br />
+                    <textarea id="txt1" class="textbox" rows="6" placeholder="Your comment"></textarea>
+                </div>
+
+                <h4>Comments</h4>
+                <div id="cmtlist"></div>
+                <!-- <h2>Comments</h2>
+                <div class="comments-container">
+                    <span id="name"></span>
+                    <span id="comment"></span>
+                    <div class="comment-section">
+                        <form id= "commentform" name="commentform" action="" method="POST">
+                            <input type="text" id="comment-name" placeholder="Enter Name"/>
+                            <textarea id="comment-message" rows="10" cols="10" placeholder="Your message"></textarea>
+                        </form>
+                        <input type="button" value="Save" id="comment-save" />
+                    </div>
+                </div> -->
+             </div>
        
     </div>
     <script src="player-fantastic.js"></script>

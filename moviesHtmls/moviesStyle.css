@@ -103,6 +103,7 @@ li a:hover:not(.active) {
   "grid-crew grid-comments grid-comments";
   grid-column-gap: 5em;
   grid-row-gap: 10em;
+  flex-wrap: wrap;
 }
 
 .grid-poster {
@@ -227,11 +228,42 @@ audio{
   position: relative;
   text-align: end;
   width: 100%;
-  height: auto;
+  height: 80%;
 } 
 video{
-  width: 90%;
+  width: 100%;
   height: auto;
+}
+.grid-trailer .controls{
+  height: 50px;
+  width:100%;
+  background: rgb(8, 77, 77);
+  color:#fff;
+  margin-top:-4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: end;
+}
+#range{
+  height:10px;
+  width: 80%;
+  border-radius: 50px;
+  outline: none;
+  border: none;
+  color: paleturquoise;
+  margin:0 .5rem;
+}
+#play-video{
+  background: none;
+  outline:none;
+  border:none;
+  color:paleturquoise;
+}
+.controls span{
+  font-family: arial;
+  margin:0 .5 rem;
+
 }
 .video_filters{
   width: 90%;
@@ -259,7 +291,9 @@ video{
   flex-direction: column;
   align-items: center;
   width: auto;
-  height: 250px;
+  height: auto;
+  background-color: paleturquoise;
+  border-radius: 2em;
 }
 
 .slideshow {
@@ -271,7 +305,7 @@ video{
 }
 /* Caption text */
 .text {
-  color: #f2f2f2;
+  color: black;
   font-style: italic;
   font-size: 15px;
   padding: 8px 12px;
@@ -309,12 +343,21 @@ video{
 
 /* CSS for comment section*/
 .grid-comments{
-  height: auto;
-  width: auto;
+  width: 90%;
   grid-area: grid-comments;
+  margin-left: 5em;
+  border-radius: 2em;
+  background-color: rgb(8, 77, 77);
 }
-.comment-section{
+.comments-container{
   border-radius: 20px;
+  display: flex;
+  align-items: flex-end;
+  padding: 2em;
+  flex-direction: column;
+}
+#comment-section{
+ 
   width:80%;
   padding: 1em;
   align-items: stretch;
