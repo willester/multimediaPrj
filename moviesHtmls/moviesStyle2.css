@@ -1,0 +1,14 @@
+@media screen and (min-width: 1024px) {
+    .gridposter{
+        width: 75%;
+        height: 75%;
+    }
+    .gridtext{
+        width:75%;
+        height:75%;
+    }
+    .gridrating{
+        width: 75%;
+        height: 75%;
+    }
+}
