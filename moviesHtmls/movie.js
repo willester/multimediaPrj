@@ -233,3 +233,15 @@ function showSlides(n) {
 // $(function(){
 //   bindCmt();
 // });
+window.onload=()=>{
+  if('serviceWorker' in navigator){
+    navigator.serviceWorker.register('serviceworkerMovies.js')
+    .then((registration)=>{
+        console.log('Service worker registered!');
+        return registration;
+    })
+    .catch((err)=>{
+        console.error('Unable to register the service worker!', err);
+    })
+}
+}
