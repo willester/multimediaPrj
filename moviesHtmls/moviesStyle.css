@@ -131,7 +131,7 @@ li a:hover:not(.active) {
   text-align: center;
   width:100%
 }
-#img_filter:hover:not(.active) {
+.img_filter:hover:not(.active) {
   background-color:rgb(129, 212, 129);
   color:black;
   transition: 1.5s;
@@ -275,7 +275,7 @@ video{
   flex-direction:row-reverse;
   align-items: flex-end;
 }
-#btnFilterVideo{
+.btnFilterVideo{
   width: 22%;
   margin:0.2em;
   padding:0.5em;
@@ -347,11 +347,10 @@ video{
 
 /* CSS for comment section*/
 .grid-comments{
-  width: 90%;
+  width: 100%;
   grid-area: grid-comments;
-  margin-left: 5em;
   border-radius: 2em;
-  background-color: rgb(8, 77, 77);
+  background-color: paleturquoise;
 }
 .comments-container{
   border-radius: 20px;
@@ -362,13 +361,25 @@ video{
 }
 #comment-section{
  
-  width:80%;
+  width:100%;
   padding: 1em;
   align-items: stretch;
   display: flex;
   flex-direction: column;
 }
-
+#btn_saveComment{
+  width: 22%;
+  margin:0.2em;
+  padding:0.5em;
+  background-color: rgb(8, 77, 77);
+  border-radius: 20px;
+  text-align: center;
+}
+.comment_body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .container{
   width: 100%;
   padding: 0% 7%;

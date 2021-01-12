@@ -131,10 +131,10 @@
                 </div>
                 
                 <div class="video_filters">
-                    <button id="btnFilterVideo" onclick="blackwhite()">black and white</button>
-                    <button id="btnFilterVideo" onclick="sepia()">sepia</button>
-                    <button id="btnFilterVideo" onclick="invert()">invert</button>
-                    <button id="btnFilterVideo" onclick="nofilter()">no filter</button>
+                    <button class="btnFilterVideo" onclick="blackwhite()">black and white</button>
+                    <button class="btnFilterVideo" onclick="sepia()">sepia</button>
+                    <button class="btnFilterVideo" onclick="invert()">invert</button>
+                    <button class="btnFilterVideo" onclick="nofilter()">no filter</button>
                 </div>
             </div>
 
@@ -169,30 +169,20 @@
                 </div>
             </div>
             <div class="grid-comments" id="comments">
-                <button class="navbutton" onClick="clearComment()" style="margin: 15px;">Clear Comment</button>
-                <button class="navbutton" onClick="saveComment()">Save Comment </button>
-
-                <div id="dtext">
-                    <h4 style="margin: 0px 15px;">Your comment</h4>
-                    <input id="namebox" type="text" maxlength="32" size="20" placeholder="Name" style="margin: 10px 15px;"/>
-                    <br />
-                    <textarea id="txt1" class="textbox" rows="6" placeholder="Your comment" style="margin: 10px 15px;"></textarea >
-                </div>
-
-                <h4 style="margin: 10px 15px;">Comments</h4>
-                <div id="cmtlist" style="margin: 10px 15px;"></div>
-                <!-- <h2>Comments</h2>
-                <div class="comments-container">
-                    <span id="name"></span>
-                    <span id="comment"></span>
-                    <div class="comment-section">
-                        <form id= "commentform" name="commentform" action="" method="POST">
-                            <input type="text" id="comment-name" placeholder="Enter Name"/>
-                            <textarea id="comment-message" rows="10" cols="10" placeholder="Your message"></textarea>
-                        </form>
-                        <input type="button" value="Save" id="comment-save" />
+                <div class="comment_body">
+                    <div id="dtext">
+                        <h4 style="margin: 0px 15px;">Your comment</h4>
+                        <input id="namebox" type="text" maxlength="32" size="20" placeholder="Name" style="margin: 10px 15px;"/>
+                        <br />
+                        <textarea id="txt1" class="textbox" rows="6" placeholder="Your comment" style="margin: 10px 15px;"></textarea >
                     </div>
-                </div> -->
+                    <button id="btn_saveComment" onClick="saveComment()">Save Comment </button>
+                    <h4 style="margin: 10px 15px;">Comments</h4>
+                    <div id="cmtlist" style="margin: 10px 15px;">
+                        <div id="last_comment">Last comments:</div>
+                    </div>
+                </div>
+                
              </div>
        
     </div>

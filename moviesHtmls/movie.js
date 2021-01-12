@@ -121,119 +121,54 @@ function showSlides(n) {
 }
 
 //JS for comment section
-// const cName=document.querySelector("#name")
-// const cComment=document.querySelector('#comment')
-// const btn_save=document.querySelector("#comment-save")
-// var aName=document.getElementById("comment-name")
-// var aComment=document.getElementById("comment-message")
-// const formData= new FormData(document.querySelector('form'))
-// for (var pair of formData.entries()) {
-//    console.log(pair[0] + ': ' + pair[1]);
-// }
-// serialize(document.forms[0]);
-// function getData(){
-//   var data=document.getElementById("commentform").elements;
-//   var obj={};
-//   for(var i=0;i<elements.length;i++){
-//     var item=elements.item(i);
-//     obj[item.name]=item.value;
-//   }
-// }
-// var form=document.getElementById('commentform');
-// form.addEventListener('change',function(){
-//   var aName=document.getElementById("comment-name")
-//   var aComment=document.getElementById("comment-message")
-//   var bName=aName.value
-//   var bComment=aComment.value
-//   localStorage.setItem("name", bName)
-//   localStorage.setItem("comment", bComment)
-// })
-// btn_save.addEventListener('click', function(){
-//   var username = localStorage.getItem("name")
-//   var comment= localStorage.getItem("comment")
-//   console.log("retrievedName:", JSON.parse(username))
-//   console.log("retrievedComment:", JSON.parse(comment))
-// });
-// window.onload=(function(){
-//   return function(){
-//     var aarr = [];
-//     for (var z=1; z<=10; z++) {
-//         aarr.push(document.getElementById("a"+z));
-//            alert(aarr[z-1].id);
-//     }
-//  };
-// });
+const cName=document.querySelector("#name")
+const cComment=document.querySelector('#comment')
+const btn_save=document.querySelector("#comment-save")
+var aName=document.getElementById("comment-name")
+var aComment=document.getElementById("comment-message")
 
-// function saveComment(){
-//   var aName=document.getElementById("comment-name")
-//   var aComment=document.getElementById("comment-message")
-//   var bName=aName.value
-//   var bComment=aComment.value
-
-  
-//     localStorage.setItem("name", bName)
-//     localStorage.setItem("comment", bComment)
-//     let username = localStorage.getItem("name")
-//     let comment= localStorage.getItem("comment")
-//     if(username){
-//       cName.innerHTML=username;
-//     }
-//     if(comment){
-//       cComment.innerHTML=comment;
-//     }
-// }
 // utility functions for localstorage
-// function setObject(key, value) {
-//   window.localStorage.setItem(key, JSON.stringify(value));
-// }
-// function getObject(key) {
-//   var storage = window.localStorage,
-//       value = storage.getItem(key);
-//   return value && JSON.parse(value);
-// }
-// function clearStorage() {
-//   window.localStorage.clear();
-// }
+function setObject(key, value) {
+  window.localStorage.setItem(key, JSON.stringify(value));
+}
+function getObject(key) {
+  var storage = window.localStorage,
+      value = storage.getItem(key);
+  return value && JSON.parse(value);
+}
 
-// // Clear inputfields and localstorage
-// function clearComment(){
-//   $('#txt1').val('');
-//   $('#namebox').val('');
-//   clearStorage();
-// }
+function saveComment(){
+  var cText = document.querySelector("#txt1");
+  var dText = cText.value;
+  console.log(dText)
+  var cName = document.querySelector("#namebox")
+  var dName= cName.value;
+  console.log(dName)
+  cmtList = getObject('cmtlist');
 
-// function saveComment(){
-//   var cText = $('#txt1').val(),
-//       cName = $('#namebox').val(),
-//       cmtList = getObject('cmtlist');
-
-//   if (cmtList){
-//     cmtList.push({name: cName, text: cText});
-//     setObject('cmtlist', cmtList);
-//   }else{ //Add a comment
-//     setObject('cmtlist', [{name: cName, text: cText}]);
-//   }
-
-//   bindCmt();
-// }
-
-// function bindCmt(){
-//   var cmtListElement = $('#cmtlist'),
-//       cmtList = getObject('cmtlist');
-
-//   //Out with the old
-//   cmtListElement.empty();
-//   //And in with the new
-//   $.each(cmtList, function(i, k){
-//     cmtListElement.append( $('<p><span>'+ k.name +'</span>'+ k.text +'</p>') );
-//   });
-// }
-
-// //Get the comments on page ready
-// $(function(){
-//   bindCmt();
-// });
+  if (cmtList){
+    cmtList.push({name: dName, text: dText});
+    setObject('cmtlist', cmtList);
+    console.log(cmtList);
+  }else{ //Add a comment
+    setObject('cmtlist', [{name: dName, text: dText}]);
+  }
+  for(let i of cmtList){
+    document.getElementById('cmtlist').innerHTML+=i.name;
+    document.getElementById('cmtlist').innerHTML+=i.text;
+  }
+}
 window.onload=()=>{
+  function setObject(key, value) {
+    window.localStorage.setItem(key, JSON.stringify(value));
+  }
+  function getObject(key) {
+    var storage = window.localStorage,
+        value = storage.getItem(key);
+    return value && JSON.parse(value);
+  }
+  let x = getObject('cmtlist');
+  console.log(x)
   if('serviceWorker' in navigator){
     navigator.serviceWorker.register('serviceworkerMovies.js')
     .then((registration)=>{
@@ -243,5 +178,13 @@ window.onload=()=>{
     .catch((err)=>{
         console.error('Unable to register the service worker!', err);
     })
-}
+  }
+  for(let i=1;i<=x.length-1;i++){
+    let y=x[i]
+    document.getElementById('cmtlist').innerHTML+=y.name;
+    document.getElementById('cmtlist').innerHTML+=": \n";
+    document.getElementById('cmtlist').innerHTML+=y.text;
+    document.getElementById('cmtlist').innerHTML+="\n";
+    console.log(y.name)
+  }
 }
